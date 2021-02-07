@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Quick sorting algorithms</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+<main>
+    <h1>Quick sorting algorithms</h1>
+
+    <h2>Try sorting (solo run)</h2>
+    <div>
+        <input type="checkbox" id="show_array" name="show" value="show">
+        <label for="show_array">Show array values?</label>
+    </div>
+    <label for="number_solo">1. Enter size for array</label>
+    <input id="number_solo" type="number">
+    <button onclick="generateRandomArray(true)">Generate random array</button>
+    <button onclick="generateSortedArray()">Generate sorted array</button>
+    <button onclick="generateReverseSortedArray()">Generate reverse sorted array</button>
+    <p class="generated"></p>
+
+    <p>2. Run one of the sorting algorithms:
+        <button onclick="timeMeasure(quickSort, true)">Quick sort</button>
+        <button onclick="timeMeasure(mergeSort, true)">Merge sort</button>
+        <button onclick="timeMeasure(heapSort, true)">Heap sort</button>
+    </p>
+    <p class="result"></p>
+    <p class="timer"></p>
+
+    <h2>Try package run (100 iteration of each sorting)</h2>
+    <label for="number_package">Enter size for random generated array</label>
+    <input id="number_package" type="number">
+    <button onclick="autoRun()">Auto run</button>
+    <table class="average"></table>
+</main>
+<script src="main.js"></script>
+</body>
+</html>
